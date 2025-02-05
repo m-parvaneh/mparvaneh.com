@@ -79,10 +79,48 @@ const Landing = () => {
                             Software Engineer (among many other things...)
                         </p>
                         {/* TODO: Continue onwards with div from here */}
+                        <div className="flex gap-4 justify-center">
+                            <a href="#projects"
+                               className="bg-white text-purple-700 px-6 py-3 rounded-lg
+                                          hover:bg-white/10 transition-colors">
+                                View Projects
+                            </a>
+                            <a href="#contact"
+                               className="border-2 border-white text-white px-6 py-3 rounded-lg
+                                          hover:bg-white/10 transition-colors">
+                                Get in Touch
+                            </a>
+                        </div>
                     </div>
-
                 </div>
             </section>
+
+            {/* About Section */}
+            <section id="about" className="py-24 bg-white">
+                <div className="max-w-6xl mx-auto px-6">
+                    <h2 className="text-4xl font-bold mb-12 text-center">About Me</h2>
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <img src="/api/placeholder/400/400" alt="Profile" className="rounded-lg shadow-lg" />
+                        </div>
+                        <div>
+                            <p className="flex flex-wrap gap-3">
+                                Insert short blurb about myself here
+                            </p>
+                        </div>
+                        <div className="flex flex-wrap gap-3">
+                            {['Python', 'Node.js', 'PostgreSQL', 'Docker', 'Kubernetes'].map((tech) => (
+                                <span key={tech} className="px-4 py-2 bg-purple-100 text-purple-700 rounded-full">
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Projects section */}
+            {/* TODO, continue from here */}
 
         </div>
     )
